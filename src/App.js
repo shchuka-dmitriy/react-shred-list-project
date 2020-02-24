@@ -40,8 +40,6 @@ const coaches = [
     }
 ];
 
-
-
 class App extends Component {
     constructor(props) {
         super(props);
@@ -51,10 +49,16 @@ class App extends Component {
         }
     }
 
+    select = (checkCoach) => {
+        this.setState(
+
+        )
+    };
+
     coachesRender = (coaches) => {
         return coaches.map(coach => {
             return (
-                <ol className="coachContainer" key={coach.id}>
+                <ol className="coachContainer" onClick={this.select(coach.id)} key={coach.id}>
                     <div className="profilePictureContainer">
                         <img className="profilePicture" src={coach.profilePicture} alt={'coach'}/>
                     </div>
